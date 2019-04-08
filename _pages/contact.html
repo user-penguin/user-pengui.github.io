@@ -1,0 +1,68 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+priority: 0.9
+---
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Matt Grey",
+    "url": "http://www.himatt.com",
+    "sameAs": [
+      "https://twitter.com/{{ site.social-username.twitter }}",
+      "https://instagram.com/{{ site.social-username.instagram }}",
+      "https://linkedin.com/in/{{ site.social-username.linkedin }}",
+      "https://medium.com/{{ site.social-username.medium }}"
+    ]
+  }
+</script>
+
+<div class="contact-wrapper">
+  <div class="contact">
+
+    <aside class="contact-intro">
+      <p class="paragraph-large">
+        You can follow me on <a href="https://twitter.com/{{ site.social-username.twitter }}">Twitter</a>
+        and <a href="https://instagram.com/{{ site.social-username.instagram }}">Instagram</a>, connect with me on
+        <a href="https://linkedin.com/in/{{ site.social-username.linkedin }}">Linkedin</a>,
+        read my articles on <a href="https://medium.com/{{ site.social-username.medium }}">Medium</a>,
+        see the inspiration I collect on <a href="https://pinterest.com/{{ site.social-username.pinterest }}">Pinterest</a>, or even
+        see what I'm listening to on <a href="https://open.spotify.com/user/{{ site.social-username.spotify }}">Spotify</a>.
+      </p>
+    </aside>
+
+    <div class="contact-form">
+      <form netlify action="thank-you">
+        <fieldset>
+          <section>
+            <label for="name">Name
+              <input autofocus type="text" name="name" id="name">
+            </label>
+          </section>
+
+          <section>
+            <label for="email">Email
+              <input required type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </label>
+          </section>
+
+          <section>
+            <label for="message">Message
+              <textarea required name="message" id="message"></textarea>
+            </label>
+          </section>
+
+          <section>
+            <div data-netlify-recaptcha></div>
+          </section>
+
+          <input class="button-secondary" type="submit" value="Send Message">
+        </fieldset>
+      </form>
+    </div>
+
+  </div>
+</div>

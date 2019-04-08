@@ -1,0 +1,53 @@
+form {
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+    display: block;
+    font-size: $font-size-large;
+  }
+
+  section {
+    margin-bottom: $measure-xsmall;
+  }
+
+  input:not([type='submit']),
+  textarea {
+    @include element-padding;
+
+    width: 100%;
+    font-size: $font-size-xlarge;
+  }
+
+  #{$all-text-inputs} {
+    border: 0;
+    border-bottom: 4px solid white;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-bottom-color $timing-interaction;
+  }
+
+  #{$all-text-inputs-hover} {
+    border: 0;
+    border-bottom: 4px solid $site-line-color;
+    transition: border-bottom-color $timing-interaction;
+  }
+
+  #{$all-text-inputs-focus},
+  #{$all-text-inputs-active} {
+    border: 0;
+    border-bottom: 4px solid $site-accent-color;
+    transition: border-bottom-color $timing-interaction;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .bot-field { @include visually-hidden; }
+}
